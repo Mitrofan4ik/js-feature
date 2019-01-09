@@ -315,6 +315,20 @@ body {
   border: 2px solid #f1d7b9;
 }
 
+.filter {
+  width: 300px;
+  position: fixed;
+  background-color: #92ebd4;
+  height: 1000px;
+  top: 130px;
+  left: 0;
+  overflow: auto;
+  overflow-x: hidden;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -509,17 +523,6 @@ body {
           flex: 0 0 auto;
   height: 80px;
   background-color: #798e93;
-}
-
-.filter {
-  width: 300px;
-  position: absolute;
-  background-color: #92ebd4;
-  height: 500px;
-  top: 0;
-  left: 0;
-  overflow: auto;
-  overflow-x: hidden;
 }
 
 .progress {

@@ -2,6 +2,7 @@ var footerHeight = document.getElementById("footer").clientHeight;
 var header = document.getElementById("header");
 var headerHeight = document.getElementById("header").clientHeight;
 var headerHeightTop = document.getElementById("header-top").clientHeight;
+var stickyBlock = document.getElementById("sticky-block");
 
 window.addEventListener("scroll", function() {
   headerHide();
@@ -9,7 +10,6 @@ window.addEventListener("scroll", function() {
 
 document.addEventListener("DOMContentLoaded", function() {
   headerHide();
-  stickyBlock();
 });
 
 headerHide = () => {
@@ -23,19 +23,17 @@ headerHide = () => {
 
   if (window.pageYOffset && bodyScrollTop > headerHeightTop) {
     header.classList.add("isfixed");
+    stickyBlock.style.top = headerHeight - headerHeightTop + "px";
   } else {
     header.classList.remove("isfixed");
+    stickyBlock.style.top = headerHeight + "px";
   }
 
   if (outherHeight === bodyClientheight && innerHeight === foterOffsetTop) {
     header.classList.add("static");
+    stickyBlock.style.top = "0px";
+    console.log("hear footer")
   } else {
     header.classList.remove("static");
   }
-}
-
-stickyBlock = () => {
-    var stickyBlock = document.getElementById("sticky-block");
-
-    console.log(stickyBlock)
 }
