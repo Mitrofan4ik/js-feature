@@ -17,9 +17,31 @@ headerHide = () => {
   var bodyScrollHeight = document.documentElement.scrollHeight;
   var bodyClientheight = document.documentElement.clientHeight;
   var foterOffsetTop = document.getElementById("footer").offsetTop;
+  var foterScrollTop = document.getElementById("footer").scrollTop;
 
   var outherHeight = bodyScrollHeight - bodyScrollTop;
   var innerHeight = bodyScrollHeight - footerHeight;
+
+
+
+  var a = foterOffsetTop - bodyScrollTop;
+
+  console.log(bodyScrollTop);
+  console.log(foterScrollTop);
+
+
+  if (bodyClientheight > a) {
+    console.log("footer appeared");
+  }
+  
+  // console.log(bodyScrollTop ,"body scrollTop");
+  // console.log(bodyClientheight, "body clientHeight");
+  // console.log(foterOffsetTop, "footer offsettop");
+
+  
+  // if(bodyScrollTop > foterOffsetTop) {
+  //   console.log("footer appeared")
+  // }
 
   if (window.pageYOffset && bodyScrollTop > headerHeightTop) {
     header.classList.add("isfixed");
@@ -32,8 +54,10 @@ headerHide = () => {
   if (outherHeight === bodyClientheight && innerHeight === foterOffsetTop) {
     header.classList.add("static");
     stickyBlock.style.top = "0px";
-    console.log("hear footer")
+    stickyBlock.style.height = bodyClientheight - footerHeight + "px";
+    // console.log("here footer");
+    // console.log(bodyClientheight, "inner height");
   } else {
     header.classList.remove("static");
   }
-}
+};
