@@ -1,0 +1,14 @@
+$colors: ( 
+    'primary': #fff,
+    'black': #000,
+    'grey': #999,
+    'bg': #f0f4f8,
+    'progress': #e9ecef,
+    'green': #28a745,
+    'blue': #007bff,
+    'blue-hover': #6a79ee
+);
+
+@function color($color) {
+    @return map-get($colors, $color);
+}

@@ -1,0 +1,31 @@
+.progress {
+  background-color: color('progress');
+  height: 5px;
+  width: 100%;
+  position: relative;
+}
+.progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  &.success-green {
+    background-color: color('green');
+  }
+  &.success-red {
+    background-color: #dc3545;
+  }
+  &.success-blue {
+    background-color: #17a2b8;
+  }
+}
+
+.progress-title {
+  display: block;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+}

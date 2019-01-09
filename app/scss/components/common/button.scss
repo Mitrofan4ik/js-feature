@@ -1,0 +1,22 @@
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid color('blue');
+  line-height: 1.5;
+  color: color('blue');
+  border-radius: 5px;
+  box-shadow: none;
+  font-size: 14px;
+  padding: 10px 20px;
+  transition: all 0.15s ease-in-out;
+}
+.btn-filled {
+  color: color('primary');
+  background-color: color('blue');
+  &:hover {
+    background-color: colro('blue-hover');
+  }
+}

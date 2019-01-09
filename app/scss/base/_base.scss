@@ -1,0 +1,51 @@
+body {
+  background-color: color("bg");
+}
+
+.section {
+  padding: 50px 0;
+}
+body {
+  font-family: $mainFont;
+  color: color("grey");
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title {
+  font-size: 22px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.text {
+  line-height: 1.5;
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+.content {
+  display: flex;
+  flex: 1 0 auto;
+  background-color: #ccc;
+  align-items: stretch;
+}
+.main {
+  flex: 1 1;
+  position: relative;
+}
+.aside {
+  flex: 0 1 400px;
+  background-color: #f1d7b9;
+  border: 2px solid #f1d7b9;
+}

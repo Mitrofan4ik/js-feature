@@ -1,0 +1,20 @@
+// base style
+@import "base/variables.scss";
+@import "base/colors.scss";
+@import "base/reset.scss";
+@import "base/base.scss";
+@import "base/flex.scss";
+@import "base/grid.scss";
+// END: base style
+
+// modules style
+@import "components/modules/header.scss";
+@import "components/modules/footer.scss";
+@import "components/modules/filter.scss";
+// END: modules style
+
+// common style
+@import "components/common/progress-bar.scss";
+@import "components/common/image-holder.scss";
+@import "components/common/button.scss";
+// END: common style
