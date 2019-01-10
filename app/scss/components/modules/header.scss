@@ -23,6 +23,7 @@
 }
 
 .header.static .header-content {
+  position: static;
   animation: headerAnimation 2s ease forwards;
 }
 
@@ -40,7 +41,6 @@
   }
   100% {
     transform: translateY(-400px);
-    position: static;
   }
 }
 

@@ -315,7 +315,6 @@ body {
   width: 300px;
   position: fixed;
   background-color: #92ebd4;
-  height: 1000px;
   top: 130px;
   left: 0;
   overflow: auto;
@@ -450,6 +449,7 @@ body {
 }
 
 .header.static .header-content {
+  position: static;
   -webkit-animation: headerAnimation 2s ease forwards;
           animation: headerAnimation 2s ease forwards;
 }
@@ -471,7 +471,6 @@ body {
   100% {
     -webkit-transform: translateY(-400px);
             transform: translateY(-400px);
-    position: static;
   }
 }
 
@@ -487,7 +486,6 @@ body {
   100% {
     -webkit-transform: translateY(-400px);
             transform: translateY(-400px);
-    position: static;
   }
 }
 

@@ -25,23 +25,29 @@ headerHide = () => {
 
 
   var a = foterOffsetTop - bodyScrollTop;
+  var b = bodyClientheight - a;
 
-  console.log(bodyScrollTop);
-  console.log(foterScrollTop);
+  // console.log(bodyScrollTop);
+  // console.log(foterScrollTop);
 
 
-  if (bodyClientheight > a) {
-    console.log("footer appeared");
-  }
+  // if (bodyClientheight > a) {
+  //   stickyBlock.style.height = bodyClientheight - headerHeight - b + headerHeightTop + "px";
+  //   console.log(bodyClientheight - headerHeight - b, "filter height");
+  //   console.log("footer appeared");
+  //   console.log(bodyScrollTop, "bodyScrollTop");
+  //   console.log(bodyClientheight, "bodyClientheight");
+  //   console.log(b, "b");
+  //   console.log(a, 'a');
+  //   console.log(foterOffsetTop, "foterOffsetTop")
+
+  // }
   
   // console.log(bodyScrollTop ,"body scrollTop");
   // console.log(bodyClientheight, "body clientHeight");
   // console.log(foterOffsetTop, "footer offsettop");
 
   
-  // if(bodyScrollTop > foterOffsetTop) {
-  //   console.log("footer appeared")
-  // }
 
   if (window.pageYOffset && bodyScrollTop > headerHeightTop) {
     header.classList.add("isfixed");
@@ -55,9 +61,14 @@ headerHide = () => {
     header.classList.add("static");
     stickyBlock.style.top = "0px";
     stickyBlock.style.height = bodyClientheight - footerHeight + "px";
-    // console.log("here footer");
-    // console.log(bodyClientheight, "inner height");
   } else {
     header.classList.remove("static");
+    stickyBlock.style.height = bodyClientheight - headerHeight + headerHeightTop  + "px";
+    // stickyBlock.style.height = bodyClientheight - headerHeight * 2 + "px";
+    if (bodyClientheight > a) {
+      stickyBlock.style.height = bodyClientheight - headerHeight - b + headerHeightTop + "px";
+    } else {
+      stickyBlock.style.height = bodyClientheight - headerHeight + headerHeightTop  + "px";
+    }
   }
 };
