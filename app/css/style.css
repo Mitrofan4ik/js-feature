@@ -319,9 +319,6 @@ body {
   left: 0;
   overflow: auto;
   overflow-x: hidden;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 
 .flex {
@@ -439,8 +436,6 @@ body {
 
 .header.isfixed .header-content {
   position: fixed;
-  -webkit-animation: headerAnimation2 0.3s ease forwards;
-          animation: headerAnimation2 0.3s ease forwards;
   z-index: 999;
 }
 
